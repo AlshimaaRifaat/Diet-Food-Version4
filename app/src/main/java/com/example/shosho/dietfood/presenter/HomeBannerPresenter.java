@@ -35,8 +35,7 @@ public class HomeBannerPresenter {
 
             @Override
             public void onFailure(Call<HomeBannerResponse> call, Throwable t) {
-                Toast.makeText(context, "لا يتوفرانترنت", Toast.LENGTH_SHORT).show();
-
+                homeBannerView.showError();
             }
         });
     }

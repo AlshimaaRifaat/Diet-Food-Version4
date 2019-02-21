@@ -45,8 +45,7 @@ public class MyOrdersPresenter {
             @Override
             public void onFailure(Call<MyOrdersResponse> call, Throwable t) {
 
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
-            }
+            myOrdersView.showError();            }
         } );
     }
 }

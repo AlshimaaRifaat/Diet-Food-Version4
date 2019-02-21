@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface OrderDetailsView {
     void showOrderDetailsResult(List<OrderDetailsData> orderDetailsDataList);
+    void showError();
 }

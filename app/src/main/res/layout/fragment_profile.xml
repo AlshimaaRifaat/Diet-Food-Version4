@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#fff"
+    android:clickable="true"
+
     android:id="@+id/profile_frame_container"
     tools:context=".fragment.ProfileFragment">
     <android.support.v4.widget.SwipeRefreshLayout
@@ -29,8 +31,26 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_10sdp"
                     android:background="@drawable/notifications_button"
-                    android:layout_alignParentLeft="true"/>
+                    android:layout_alignParentRight="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="تسجيل خروج"
+                    android:textColor="#fff"
+                    android:id="@+id/log_out"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="تسجيل دخول"
+                    android:textColor="#fff"
+                    android:id="@+id/log_in"
+                    android:visibility="gone"
+                    />
             </RelativeLayout>
         </android.support.v7.widget.Toolbar>
     <RelativeLayout

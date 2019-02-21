@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     xmlns:shimmer="http://schemas.android.com/apk/res-auto"
     android:background="#fff"
+    android:clickable="true"
+
     tools:context=".fragment.ProducerFamilyFragment">
 
     <!-- TODO: Update blank fragment layout -->

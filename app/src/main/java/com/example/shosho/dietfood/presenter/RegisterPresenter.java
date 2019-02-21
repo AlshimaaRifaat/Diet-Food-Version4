@@ -56,7 +56,6 @@ public class RegisterPresenter {
             @Override
             public void onFailure(Call<RegisterResponse> call, Throwable t) {
                 registerView.showError(  );
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
             }
         } );
     }

@@ -46,7 +46,7 @@ public class MySubscribtionPresenter {
             @Override
             public void onFailure(Call<MySubscribtionResponse> call, Throwable t) {
 
-                Toast.makeText( context, "لا توجد بيانات", Toast.LENGTH_SHORT ).show();
+               mySubscribtionView.showError();
             }
         } );
     }

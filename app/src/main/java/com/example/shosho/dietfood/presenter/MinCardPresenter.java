@@ -45,7 +45,6 @@ public class MinCardPresenter {
             @Override
             public void onFailure(Call<MinCardResponse> call, Throwable t) {
                 minCardView.showError();
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
             }
         } );
     }

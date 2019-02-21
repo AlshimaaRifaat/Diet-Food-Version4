@@ -55,6 +55,7 @@ public class PackageDetailsFragment extends Fragment implements PackageDetailsVi
     Button subscribeBtn;
     String UserToken;
     PackageDetailsData packageDetailsData;
+
     public PackageDetailsFragment() {
         // Required empty public constructor
     }

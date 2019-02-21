@@ -45,7 +45,6 @@ public class DeleteCardPresenter {
             @Override
             public void onFailure(Call<DeleteCardResponse> call, Throwable t) {
                 deleteCardView.showError();
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
             }
         } );
     }

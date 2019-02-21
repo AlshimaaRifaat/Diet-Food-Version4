@@ -44,8 +44,7 @@ public class MyOrdersDetailsPresenter {
             @Override
             public void onFailure(Call<OrderDetailsResponse> call, Throwable t) {
 
-                Toast.makeText(context, "لا يتوفر بيانات", Toast.LENGTH_SHORT).show();
-
+            orderDetailsView.showError();
             }
         } );
     }

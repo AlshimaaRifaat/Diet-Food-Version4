@@ -44,7 +44,7 @@ public class PackageDetailsPresenter {
             @Override
             public void onFailure(Call<PackageDetailsResponse> call, Throwable t) {
 
-                Toast.makeText(context, "لا يتوفر انترنت", Toast.LENGTH_SHORT).show();
+               packageDetailsView.showError();
 
             }
         } );

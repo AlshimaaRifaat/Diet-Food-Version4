@@ -49,7 +49,6 @@ public class LoginPresenter {
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 loginView.showError(  );
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
             }
         } );
     }

@@ -120,7 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingRight="@dimen/_10sdp"
-                android:inputType="text"
+                android:inputType="number"
                 android:textColor="#706e6f"/>
         </android.support.design.widget.TextInputLayout>
         </RelativeLayout>

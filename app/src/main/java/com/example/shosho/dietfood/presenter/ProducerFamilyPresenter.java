@@ -38,8 +38,7 @@ public class ProducerFamilyPresenter {
             @Override
             public void onFailure(Call<ProducerFamilyResponse> call, Throwable t) {
 
-                Toast.makeText(context, "لا يتوفر انترنت", Toast.LENGTH_SHORT).show();
-
+               producerFamilyView.showError();
             }
         } );
     }

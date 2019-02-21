@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:background="#fff"
     android:id="@+id/home_frame_container"
+    android:clickable="true"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.HomeFragment">
     <android.support.v4.widget.SwipeRefreshLayout

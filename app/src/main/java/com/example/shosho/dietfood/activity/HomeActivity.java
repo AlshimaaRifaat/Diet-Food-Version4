@@ -60,6 +60,7 @@ public class HomeActivity extends AppCompatActivity implements CardView {
 
         setupViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setRotationX(180);
        onSelectedTab();
       cardPresenter=new CardPresenter(this,this);
       cardPresenter.getCardList(UserToken);

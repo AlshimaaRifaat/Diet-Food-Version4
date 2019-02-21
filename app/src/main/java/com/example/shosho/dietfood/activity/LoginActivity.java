@@ -116,7 +116,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView{
 
             else
             {
-                Toast.makeText( this,"من فضلك فضلك املأ البيانات ", Toast.LENGTH_SHORT ).show();
+                Toast.makeText( this,"من فضلك, املأ البيانات ", Toast.LENGTH_SHORT ).show();
             }
 
         }else {

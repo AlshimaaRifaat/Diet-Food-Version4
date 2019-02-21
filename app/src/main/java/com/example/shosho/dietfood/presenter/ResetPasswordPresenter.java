@@ -56,7 +56,6 @@ public class ResetPasswordPresenter {
             public void onFailure(Call<ResetPasswordResponse> call, Throwable t) {
                 resetPasswordView.showError();
 
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
             }
         } );
     }

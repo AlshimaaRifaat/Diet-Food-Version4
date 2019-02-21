@@ -53,7 +53,6 @@ public class ChangePasswordPresenter {
             @Override
             public void onFailure(Call<ChangePasswordResponse> call, Throwable t) {
                 changePasswordView.showError();
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
             }
         } );
     }

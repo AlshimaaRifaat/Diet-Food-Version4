@@ -42,8 +42,7 @@ public class MealComponentPresenter
             @Override
             public void onFailure(Call<MealComponentResponse> call, Throwable t) {
 
-                Toast.makeText(context, "لا يتوفر انترنت", Toast.LENGTH_SHORT).show();
-
+           mealComponentView.showError();
             }
         } );
     }

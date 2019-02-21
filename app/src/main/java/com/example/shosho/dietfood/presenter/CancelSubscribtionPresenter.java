@@ -45,7 +45,6 @@ public class CancelSubscribtionPresenter {
 
             @Override
             public void onFailure(Call<CancelSubscribtionResponse> call, Throwable t) {
-                Toast.makeText(context, "لا توجد بيانات", Toast.LENGTH_SHORT).show();
             }
         } );
     }

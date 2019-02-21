@@ -37,8 +37,7 @@ public class HomeProductPresenter {
             @Override
             public void onFailure(Call<HomeProductResponse> call, Throwable t) {
 
-                Toast.makeText(context, "لا يتوفر انترنت", Toast.LENGTH_SHORT).show();
-
+             homeProductView.showError();
             }
         } );
     }

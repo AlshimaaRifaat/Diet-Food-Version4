@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
+    android:clickable="true"
+
     tools:context=".fragment.PaidConsultationFragment">
 
     <android.support.v7.widget.Toolbar
@@ -112,7 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingRight="@dimen/_10sdp"
-                android:inputType="text"
+                android:inputType="number"
                 android:textColor="#706e6f"/>
         </android.support.design.widget.TextInputLayout>
     </RelativeLayout>
@@ -165,7 +167,7 @@
         <android.support.design.widget.TextInputLayout
             android:id="@+id/text_layout_msg"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_80sdp"
+            android:layout_height="wrap_content"
             android:hint="الرسالة"
             android:layout_marginLeft="@dimen/_13sdp"
             android:layout_marginRight="@dimen/_13sdp"
@@ -174,7 +176,7 @@
             <EditText
                 android:id="@+id/paid_consult_edit_text_msg"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_80sdp"
+                android:layout_height="wrap_content"
                 android:inputType="text"
                 android:textColor="#706e6f"
                 />

@@ -69,12 +69,14 @@ public class DetailsProducerFamilyFragment extends Fragment implements MealCompo
     }
 
     View view;
+    Context context;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_details_producer_family, container, false);
         init();
+        context=this.getActivity();
         UserToken=SplashActivity.Login;
         sharedPref=getActivity().getSharedPreferences( "default",Context.MODE_PRIVATE );
         Login=sharedPref.getString( "login_to_home",null );
@@ -113,10 +115,13 @@ public class DetailsProducerFamilyFragment extends Fragment implements MealCompo
 
     private void performAddingToCard() {
         if(Login==null){
-            Toast.makeText(getContext(), "سجل دخولك أولا!", Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(getContext(), "سجل دخولك أولا!", Toast.LENGTH_SHORT).show();
+
             Intent i = new Intent(getActivity(), LoginActivity.class);
             startActivity(i);
             ((Activity) getActivity()).overridePendingTransition(0,0);
+            getActivity().finish();
         }else {
 
 
@@ -150,7 +155,9 @@ public class DetailsProducerFamilyFragment extends Fragment implements MealCompo
     public void showAddToCardResult(AddToCardData addToCardData) {
         //cardPresenter=new CardPresenter(getContext(),this);
         CardFragment.cardPresenter.getCardList(UserToken);
-        Toast.makeText(getContext(), addToCardData.getMessage(), Toast.LENGTH_SHORT).show();
+        if(context!=null){
+        Toast.makeText(getActivity(),"تم الاضافة الي السلة", Toast.LENGTH_SHORT).show();
+        }
 
     }
 
@@ -181,5 +188,9 @@ public class DetailsProducerFamilyFragment extends Fragment implements MealCompo
 
     }
 
-
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        context=null;
+    }
 }

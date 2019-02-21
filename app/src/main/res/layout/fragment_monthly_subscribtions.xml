@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#fff"
+    android:clickable="true"
+
     tools:context=".fragment.MonthlySubscribtionsFragment">
 
     <RelativeLayout
@@ -89,8 +91,7 @@
             android:layout_marginRight="@dimen/_12sdp"
             android:layout_marginBottom="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_12sdp"
-            android:alpha=".6"
-            android:background="#FF4B5157"
+            android:alpha=".7"
             android:layout_below="@+id/monthly_subscribtion_tool_bar"
 
             >
@@ -126,8 +127,8 @@
             android:layout_marginLeft="@dimen/_12sdp"
             android:layout_marginRight="@dimen/_12sdp"
             android:layout_marginBottom="@dimen/_12sdp"
-            android:alpha=".6"
-            android:background="#FF4B5157"
+            android:alpha=".7"
+
             android:layout_below="@+id/monthly_subscribe_image1">
 
             <TextView
@@ -160,8 +161,7 @@
             android:layout_marginLeft="@dimen/_12sdp"
             android:layout_marginRight="@dimen/_12sdp"
             android:layout_marginBottom="@dimen/_12sdp"
-            android:alpha=".6"
-            android:background="#FF4B5157"
+            android:alpha=".7"
             android:layout_below="@+id/monthly_subscribe_image2"
             >
 

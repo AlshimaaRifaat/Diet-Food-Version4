@@ -43,7 +43,6 @@ public class ProfilePresenter {
             @Override
             public void onFailure(Call<ProfileResponse> call, Throwable t) {
                 profileView.showError();
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
             }
         } );
     }

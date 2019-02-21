@@ -51,7 +51,7 @@ public class PaidConsultationPresenter {
             @Override
             public void onFailure(Call<PaidConsultationResponse> call, Throwable t) {
                 paidConsultationView.showError(  );
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
+
             }
         } );
     }

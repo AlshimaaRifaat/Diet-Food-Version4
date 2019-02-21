@@ -77,4 +77,9 @@ public class DetailsMyOrdersFragment extends Fragment implements OrderDetailsVie
         recyclerViewOrderDetails.setAdapter( myOrdersDetailsAdapter );
 
     }
+
+    @Override
+    public void showError() {
+
+    }
 }

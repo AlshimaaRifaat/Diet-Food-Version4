@@ -51,7 +51,6 @@ public class PostOrderPresenter {
             @Override
             public void onFailure(Call<PostOrderResponse> call, Throwable t) {
                 postOrderView.showError(  );
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
             }
         } );
     }

@@ -54,7 +54,6 @@ public class UpdateProfilePresenter {
             @Override
             public void onFailure(Call<UpdateProfileResponse> call, Throwable t) {
                 updateProfileView.showError();
-                Toast.makeText( context, "لا يتوفر انترنت", Toast.LENGTH_SHORT ).show();
             }
         } );
     }

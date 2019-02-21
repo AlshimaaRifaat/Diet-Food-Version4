@@ -26,6 +26,7 @@ import com.bumptech.glide.Glide;
 import com.example.shosho.dietfood.NetworkConnection;
 import com.example.shosho.dietfood.R;
 import com.example.shosho.dietfood.activity.ChangePasswordActivity;
+import com.example.shosho.dietfood.activity.LoginActivity;
 import com.example.shosho.dietfood.model.ProfileData;
 import com.example.shosho.dietfood.model.User;
 import com.example.shosho.dietfood.presenter.ProfilePresenter;
@@ -62,7 +63,7 @@ public class ProfileFragment extends Fragment implements ProfileView,UpdateProfi
     private final int PICK_IMAGE_REQUEST=71;
     public String encImage;
 
-
+    SharedPreferences.Editor share;
     public static String Login;
 
     public ProfileFragment() {
@@ -77,6 +78,7 @@ public class ProfileFragment extends Fragment implements ProfileView,UpdateProfi
 
     NetworkConnection networkConnection;
     SwipeRefreshLayout swipeRefreshLayout;
+    TextView log_out,log_in;
     User user;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -84,6 +86,8 @@ public class ProfileFragment extends Fragment implements ProfileView,UpdateProfi
         // Inflate the layout for this fragment
         view= inflater.inflate( R.layout.fragment_profile, container, false );
         init();
+        share=getActivity().getSharedPreferences("default",Context.MODE_PRIVATE ).edit();
+        Log_Out();
         networkConnection=new NetworkConnection(getContext());
         imageProfile.setOnClickListener( new View.OnClickListener() {
             @Override
@@ -260,6 +264,8 @@ public class ProfileFragment extends Fragment implements ProfileView,UpdateProfi
         saveEdit=view.findViewById( R.id.profile_btn_save_edit );
         viewMySubscribtions=view.findViewById( R.id.profile_text_view );
         swipeRefreshLayout=view.findViewById(R.id.profile_swip_refresh);
+        log_out=view.findViewById(R.id.log_out);
+        log_in=view.findViewById(R.id.log_in);
     }
 
     @Override
@@ -277,7 +283,30 @@ public class ProfileFragment extends Fragment implements ProfileView,UpdateProfi
 
 
     }
+    public void Log_Out(){
+        if(UserToken==null){
+            log_in.setVisibility(View.VISIBLE);
+            log_out.setVisibility(View.GONE);
+        }
+        log_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                share.putString( "login_to_home",null );
+                share.apply();
+                startActivity(new Intent(getActivity(), LoginActivity.class));
+                getActivity().finish();
 
+            }
+        });
+        log_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), LoginActivity.class));
+                getActivity().finish();
+
+            }
+        });
+    }
 
     @Override
     public void showupdatedProfile(String Message) {
@@ -287,7 +316,7 @@ public class ProfileFragment extends Fragment implements ProfileView,UpdateProfi
 
     @Override
     public void showError() {
-
+        swipeRefreshLayout.setRefreshing( false );
     }
 
     @Override

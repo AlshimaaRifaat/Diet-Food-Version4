@@ -54,9 +54,9 @@ View view;
         return !TextUtils.isEmpty( Email )&&  android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches();
     }
     private void performSendingConsultation() {
-        FUtilsValidation.isEmpty( userName,"من فضلك ادخل اسمك"  );
+        FUtilsValidation.isEmpty( userName,"من فضلك,ادخل اسمك"  );
         FUtilsValidation.isEmpty( userPhone,"من فضك,اكتب رقم التليفون الخاص بك" );
-        FUtilsValidation.isEmpty( userEmail,"من فضلك ادخل بريدك الالكترونى" );
+        FUtilsValidation.isEmpty( userEmail,"من فضلك, ادخل بريدك الالكترونى" );
         FUtilsValidation.isEmpty( userMsg,"من فضك,اترك رسالتك" );
 
         validateEmail();

@@ -161,7 +161,7 @@ View view;
 
     @Override
     public void showError() {
-
+        swipeRefreshLayout.setRefreshing( false );
     }
 
     @Override
